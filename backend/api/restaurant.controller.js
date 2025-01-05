@@ -1,8 +1,8 @@
-import RestaurantDAO from "../dao/restaurantDAO"
+import RestaurantDAO from "../dao/restaurantDAO.js"
 
 export default class RestaurantController {
     static async apiGetRestaurants(req, res, next) {
-        const defaultRestaurantsPerPage = 20
+        const defaultRestaurantsPerPage = 15
         const restaurantsPerPage = req.query.restaurantsPerPage ? parseInt(req.query.restaurantsPerPage, 10) : defaultRestaurantsPerPage
         const page = req.query.page ? parseInt(req.query.page, 10) : 0
 
